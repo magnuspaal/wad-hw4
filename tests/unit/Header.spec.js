@@ -7,24 +7,15 @@ describe('Header', () => {
         const wrapper = mount(Header);
 
         let monthNames = [
-            "JAN",
-            "FEB",
-            "MAR",
-            "APR",
-            "MAY",
-            "JUN",
-            "JUL",
-            "AUG",
-            "SEP",
-            "OCT",
-            "NOV",
-            "DEC"
+            "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"
         ];
+
+        let weekdayNames = ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"];
 
         let now = new Date();
         let year = now.getFullYear();
         let month = monthNames[now.getMonth()];
-        let weekday = now.getDay();
+        let weekday = weekdayNames[now.getDay() - 1];
         let date = now.getDate();
 
         expect(wrapper.html()).toContain(year);
