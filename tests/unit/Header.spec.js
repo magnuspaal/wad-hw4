@@ -10,12 +10,12 @@ describe('Header', () => {
             "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"
         ];
 
-        let weekdayNames = ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"];
+        let weekdayNames = ["SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"];
 
         let now = new Date();
         let year = now.getFullYear();
         let month = monthNames[now.getMonth()];
-        let weekday = weekdayNames[now.getDay() - 1];
+        let weekday = weekdayNames[now.getDay()];
         let date = now.getDate();
 
         expect(wrapper.html()).toContain(year);
