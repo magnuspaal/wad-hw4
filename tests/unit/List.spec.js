@@ -1,4 +1,4 @@
-import { mount } from '@vue/test-utils'
+import {createWrapper, mount, shallowMount} from '@vue/test-utils'
 import List from "../../src/components/List.vue";
 
 describe('List', () => {
